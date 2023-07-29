@@ -31,3 +31,4 @@ def checkPalindrome(n):
     return True
 
 print(checkPalindrome('лепсспел'))
+
