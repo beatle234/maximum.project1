@@ -13,13 +13,21 @@
 
 #или
 
-def strconter(s):
-    syms_counter = {}
-    for symbol in s:
-        syms_counter[symbol] = syms_counter.get(symbol, 0) +1
+# def strconter(s):
+#     syms_counter = {}
+#     for symbol in s:
+#         syms_counter[symbol] = syms_counter.get(symbol, 0) +1
+#
+#     for symbol, count in syms_counter.items():
+#         print(symbol, count)
+#
+# strconter('hello world')
 
-    for symbol, count in syms_counter.items():
-        print(symbol, count)
+def checkPalindrome(n):
+    centr = len(n)//2
+    for i in range(centr):
+        if n[i]!=n[len(n)-1-i]:
+            return False
+    return True
 
-strconter('hello world')
-
+print(checkPalindrome('лепсспел'))
