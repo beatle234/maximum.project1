@@ -35,6 +35,13 @@ class Advertisement(models.Model):
              )
          return self.update_ad.strftime('%d.%m.%Y в %H:%M:%S')
 
+     @admin.display(description='фото')
+     def get_html_image(self):
+         if self.image:
+             return format_html(
+                 '<img scr="{url}" style="max-width: 80px; max-height: 80px;"', url=self.image.url
+             )
+
      def __str__(self):
           return f'Advertisement(id={self.id}, title={self.title}, price={self.price})'
 
