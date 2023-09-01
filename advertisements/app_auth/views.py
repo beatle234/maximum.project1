@@ -25,7 +25,7 @@ def login_view(request):
 
 @login_required(login_url=reverse_lazy('login'))
 def profile_view(request):
-    return request, 'app_auth/profile.html'
+    return render(request, 'app_auth/profile.html')
 
 def logout_view(request):
     logout(request)
